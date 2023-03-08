@@ -61,10 +61,10 @@ def deep_learning_phase(data_wrangling):
 
 if __name__ == '__main__':
     conf = SparkConf().setAppName("Recommender System with Spark")
-    conf.set('spark.master', 'local[6]')
-    conf.set('spark.driver.memory', '16g')
-    conf.set("spark.executor.memory", "8g")
-    conf.set("spark.executor.cores", "2")
+    conf.set('spark.master', 'local[10]')
+    conf.set('spark.driver.memory', '20g')
+    conf.set("spark.executor.memory", "12g")
+    conf.set("spark.executor.cores", "4")
     conf.set("spark.hadoop.fs.s3a.block.size", "268435456")
     conf.set("spark.sql.pivotMaxValues", PIVOT_MAX_VALUES)
 
@@ -79,7 +79,7 @@ if __name__ == '__main__':
                     '../dataset/rating_partition_full/repartition-04.parquet',
                     '../dataset/rating_partition_full/repartition-05.parquet']
 
-    df_rating = data_gathering_phase_distributed(spark, parquet_path)
+    df_rating = data_gathering_phase_distributed(spark, RATING_GATHERING_FULL_FILE_PATH)
     df_rating_wrangling = data_wrangling_phase_distributed(spark, df_rating)
     df_rating_wrangling.show()
     deep_learning_phase(data_wrangling=df_rating_wrangling)

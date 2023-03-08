@@ -8,13 +8,13 @@ N_PRINCIPAL_COMPONENTS = 10
 TRAIN_RATIO = 0.8
 
 # FILE PATHS
-MIN_VOTES_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/min_votes.parquet'
-N_VOTES_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/n_votes.parquet'
-PIVOT_USER_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/pivot_user.parquet'
-PIVOT_MOVIE_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/pivot_movie.parquet'
-SVD_USER_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/svd_user.parquet'
-SVD_MOVIE_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/svd_movie.parquet'
-RATING_WRANGLING_FILE_PATH = '/Users/bryamdavidvegamoreno/Documents/recommender-system-spark/dataset/rating_wrangling.parquet'
+MIN_VOTES_FILE_PATH = '../dataset/min_votes.parquet'
+N_VOTES_FILE_PATH = '../dataset/n_votes.parquet'
+PIVOT_USER_FILE_PATH = '../dataset/pivot_user.parquet'
+PIVOT_MOVIE_FILE_PATH = '../dataset/pivot_movie.parquet'
+SVD_USER_FILE_PATH = '../dataset/svd_user.parquet'
+SVD_MOVIE_FILE_PATH = '../dataset/svd_movie.parquet'
+RATING_WRANGLING_FILE_PATH = '../dataset/rating_wrangling.parquet'
 RATING_GATHERING_FULL_FILE_PATH = ['../dataset/rating_partition_full/repartition-00.parquet',
                                    '../dataset/rating_partition_full/repartition-01.parquet',
                                    '../dataset/rating_partition_full/repartition-02.parquet',
